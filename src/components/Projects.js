@@ -8,7 +8,7 @@ import { makeStyles } from '@mui/styles';
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
-import img from './image_3.png'
+import { projects } from '../data'
 
 export default function Projects() {
   const classes = useStyles();
@@ -50,10 +50,10 @@ export default function Projects() {
           removeArrowOnDeviceType={["mobile"]}
           showDots infinite renderButtonGroupOutside={true}
         >
-          {[1, 2, 3, 4].map((item, index) => (
+          {projects.map((item, index) => (
             <Box key={index} className={classes.card}>
               <div className={classes.cardIcon}>
-                <img src={img} style={{width: 200}}/>
+                <img src={item.image} style={{width: 200}}/>
               </div>
               <Typography variant='h5' className={classes.cardTitle}>
                 Web Development
@@ -74,11 +74,12 @@ export default function Projects() {
 const useStyles = makeStyles(theme => ({
   root: {
     flex: 1,
-    //padding: 20,
+    padding: 20,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
+    paddingTop: 100, //toolbar
   },
   section: {
     [theme.breakpoints.up('md')]: {
@@ -114,7 +115,7 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     width: 350,
-    [theme.breakpoints.down('sm')]: {
+    '@media (max-width: 400px)': {
       width: 250,
     },
     height: 350,

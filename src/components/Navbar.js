@@ -7,6 +7,8 @@ import { makeStyles } from '@mui/styles';
 import { MenuIcon } from "@heroicons/react/solid";
 import Scrollspy from 'react-scrollspy'
 
+import logo from '../assets/logo.png'
+
 export default function Navbar() {
   const classes = useStyles();
 
@@ -18,11 +20,15 @@ export default function Navbar() {
     <Box className={classes.root}>
       <Box className={classes.appBar}>
       <div className={classes.title}>
-        <a href='#about' className={classes.link}>
+        <img src={logo} style={{width: 35}} />
+        {/* <a href='#about' className={classes.link}> */}
           <Typography variant='h5' className={classes.titleText}>
-            SarahK.
+            arahK.
           </Typography>
-        </a>
+          <Typography variant='h5' style={{color: 'yellow'}} className={classes.titleText}>
+            
+          </Typography>
+        {/* </a> */}
       </div>
 
       <Box className={classes.navMenu} sx={{display: {md: 'block', xs: 'none'}}}>
@@ -140,12 +146,11 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flex: 1,
+    display: 'flex',
   },
   titleText: {
-    verticalAlign: 'center',
-    '&:hover': {
-      color: "grey"
-    },
+    marginTop: 'auto',
+    paddingBottom: 0,
   },
   row: {
     display: 'flex',
@@ -155,6 +160,10 @@ const useStyles = makeStyles(theme => ({
     alignSelf: 'flex-end',
     justifySelf: 'flex-end',
     marginLeft: 20,
+    [theme.breakpoints.down('md')]: {
+      alignSelf: 'flex-start',
+      justifySelf: 'flex-start',
+    }
   },
   scrollspy: {
     justifyContent: 'center',
@@ -198,6 +207,8 @@ const useStyles = makeStyles(theme => ({
       cursor: 'pointer',
     },
     marginRight: 20,
+    marginTop: 'auto',
+    marginBottom: 'auto',
   },
   menuText: {
     fontSize: 18,

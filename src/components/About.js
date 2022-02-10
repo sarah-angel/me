@@ -39,6 +39,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
+    paddingTop: 100, //toolbar
   },
   section: {
     width: '70%',

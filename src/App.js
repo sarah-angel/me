@@ -19,9 +19,12 @@ export default function App() {
         primary: "#ffffff"
       },
       primary: {
-        main: "#ff0000",
+        main: "#f7d608",
         //dark: "#0091ea",
         //light: "#f6ef77"
+      },
+      secondary : {
+        main: '#112240',
       },
       background: {
         paper: '#424242',
@@ -29,7 +32,7 @@ export default function App() {
       },
     }
   })
-
+console.log(theme)
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

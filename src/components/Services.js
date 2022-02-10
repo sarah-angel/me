@@ -48,11 +48,12 @@ export default function Services() {
 const useStyles = makeStyles(theme => ({
   root: {
     flex: 1,
-    padding: 20,
+    //padding: 20,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
+    paddingTop: 100,
   },
   section: {
     [theme.breakpoints.up('md')]: {

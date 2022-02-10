@@ -1,10 +1,15 @@
+import proj1 from './assets/project-1.gif'
+import proj2 from './assets/project-2.gif'
+import proj3 from './assets/project-3.gif'
+import proj4 from './assets/project-4.gif'
+
 export const projects = [
   {
     title: "React Reserve",
     subtitle: "MERN Stack",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
+    image: proj1,
     link: "https://reactbootcamp.com",
   },
   {
@@ -12,24 +17,24 @@ export const projects = [
     subtitle: "React and Python",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
-    link: "https://reactbootcamp.com",
+      image: proj2,
+      link: "https://reactbootcamp.com",
   },
   {
     title: "DevChat",
     subtitle: "React and Firebase",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
-    link: "https://reactbootcamp.com",
+      image: proj3,
+      link: "https://reactbootcamp.com",
   },
   {
     title: "Epic Todo App",
     subtitle: "React Hooks",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://reactbootcamp.com",
+      image: proj4,
+      link: "https://reactbootcamp.com",
   },
 ];
 
